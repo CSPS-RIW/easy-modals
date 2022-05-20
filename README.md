@@ -7,6 +7,8 @@ This app uses [vite](https://vitejs.dev/guide/) to bundle the scripts and styles
 * In the terminal add: `npm install` to install all the dependencies.
 * Then use `npm run dev` to run a development environment.
 * To compile the scss files use `npm run sass-watch`
+* Use `npm run build` to generate a package for production
+* Use `npm run preview` to generate a package for production and open it locally
 
 ## Usage:
 
