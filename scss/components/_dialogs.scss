@@ -1,0 +1,116 @@
+@use '../utils/vars/colors'as c;
+@use '../utils/mixins/breakpoints'as b;
+
+dialog {
+    border: none;
+    max-width: 35em;
+    width: 60%;
+    padding: 0;
+
+    &[open]::backdrop {
+        background-color: rgba(0, 0, 0, 0.6);
+        animation: fadein-bd 500ms forwards;
+
+        @media (prefers-reduced-motion) {
+            animation: fadein-bd 500ms forwards;
+        }
+    }
+
+    .modal-header {
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        h {
+
+            &2,
+            &3 {
+                flex-grow: 2;
+                margin-bottom: 0;
+            }
+        }
+
+        .close-modal {
+            outline: none;
+            border: none;
+            color: c.$body-grey;
+            margin: 0.25rem .25rem 0 auto;
+            background-color: c.$white-heat;
+            padding: 0.25rem 1rem;
+            flex-shrink: 1;
+
+            &:focus,
+            &:hover {
+                outline: 2px solid c.$body-grey;
+            }
+        }
+    }
+
+    .modal-content {
+        max-width: 80%;
+        width: 17em;
+
+        @include b.breakpoint(small) {
+            // Tablets
+            width: 35em;
+        }
+
+        @include b.breakpoint(large) {
+            // Laptops
+            width: 60em;
+
+        }
+    }
+
+    .modal-footer {
+        justify-content: flex-start;
+
+        .close-modal {
+            // position: relative;
+            // width: 4em;
+            // left: -6em;
+            border: 1px solid c.$slate-blue;
+            color: opacity(1);
+
+        }
+    }
+
+    &[showing] {
+        display: block;
+        inset: 0;
+        animation: fadein-md 500ms forwards, slidedown-modal 500ms forwards;
+
+        @media (prefers-reduced-motion) {
+            animation: fadein-md 500ms forwards;
+        }
+
+        &::backdrop {
+            background-color: rgba(0, 0, 0, 0.6);
+            animation: fadein-bd 500ms forwards;
+
+            @media (prefers-reduced-motion) {
+                animation: fadein-bd 500ms forwards;
+            }
+        }
+    }
+
+    &[hiding] {
+        display: block;
+        inset: 0;
+        animation: fadeout 555ms forwards, scaleout 550ms forwards;
+
+
+        @media (prefers-reduced-motion) {
+            animation: fadeout 550ms forwards;
+        }
+
+        &::backdrop {
+            animation: fadeout-bd 550ms forwards;
+
+            @media (prefers-reduced-motion) {
+                animation: fadeout-bd 500ms forwards;
+            }
+        }
+    }
+}

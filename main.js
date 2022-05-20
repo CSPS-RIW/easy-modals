@@ -1,4 +1,5 @@
 import './style.css'
+import "wicg-inert"
 
 document.querySelector('#app').innerHTML = `
   <h1>Hello Vite!</h1>
@@ -14,7 +15,8 @@ let content = document.querySelector('.D2L-template-layout');
 const closeModal = (e) => {
   let closestDialog = e.target.closest('dialog');
   // Animate closing modals
-  content.removeAttribute('inert');
+  // content.inert = false;
+  // content.removeAttribute('inert');
   closestDialog.setAttribute('hiding', '');
   closestDialog.addEventListener('animationend', () => {
     closestDialog.close();
@@ -41,7 +43,7 @@ modals.forEach((modal) => {
           modal.showModal();
           modal.addEventListener('animationend', () => {
             modal.removeAttribute('showing');
-            content.setAttribute('inert', 'true');
+            // content.inert = true;
           }, {
             once: true
           })

@@ -1,8 +1,307 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@keyframes fieldup {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-5%);
+  }
 }
+@keyframes fielddown {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes scaleout {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes scalein {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slidedown-modal {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes fadein-bd {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+@keyframes fadeout-bd {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadein-md {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* **************************************************
+ * Color scheme
+ * *************************************************/
+/* **************************************************
+   * default colors
+   * *************************************************/
+/* **************************************************
+ * BUTTONS
+ * *************************************************/
+/* **************************************************
+   * BLOCKQUOTES
+   * *************************************************/
+/* **************************************************
+     * LISTS
+     * *************************************************/
+/* **************************************************
+ * BANNER
+ * *************************************************/
+/* **************************************************
+ * JUMBOTRON
+ * *************************************************/
+/* **************************************************
+ * PANELS
+ * *************************************************/
+/* **************************************************
+ * TABLES
+ * *************************************************/
+/* **************************************************
+ * ACCORDIONS
+ * *************************************************/
+/* **************************************************
+ * CARDS
+ * *************************************************/
+/* **************************************************
+ * TABS
+ * *************************************************/
+/*========= Buttons ==========*/
+button,
+.btn {
+  font-size: 1.125rem;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0.625rem 1.5rem 0.625rem;
+  line-height: 1.25;
+  -webkit-appearance: none;
+  /* Default Button and Primary Button - this can be split up if necessary */
+  /* PRIMARY Button */
+}
+button.btn-primary, button.copy-btn,
+.btn.btn-primary,
+.btn.copy-btn {
+  background-color: #4e5b73;
+  border-color: #4e5b73;
+  color: #fff;
+}
+button.btn-primary:hover, button.copy-btn:hover,
+.btn.btn-primary:hover,
+.btn.copy-btn:hover {
+  background-color: #251933;
+  border-color: #4e5b73;
+  color: #fff;
+}
+button.btn-primary:focus, button.copy-btn:focus,
+.btn.btn-primary:focus,
+.btn.copy-btn:focus {
+  background-color: #4e5b73;
+  border-color: #fff;
+  box-shadow: 0 0 0 1px #006fbf;
+}
+button.btn-primary:disabled, button.btn-primary[aria-expanded=true], button.copy-btn:disabled, button.copy-btn[aria-expanded=true],
+.btn.btn-primary:disabled,
+.btn.btn-primary[aria-expanded=true],
+.btn.copy-btn:disabled,
+.btn.copy-btn[aria-expanded=true] {
+  background: #4e5b73;
+  /* The Fallback */
+  background: rgba(78, 91, 115, 0.7);
+  border-color: background-opacity(#4e5b73, 0.7);
+  color: #ffffff;
+}
+button.btn-primary:disabled:hover, button.btn-primary[aria-expanded=true]:hover, button.copy-btn:disabled:hover, button.copy-btn[aria-expanded=true]:hover,
+.btn.btn-primary:disabled:hover,
+.btn.btn-primary[aria-expanded=true]:hover,
+.btn.copy-btn:disabled:hover,
+.btn.copy-btn[aria-expanded=true]:hover {
+  background-color: background-opacity(#4e5b73, 0.7);
+  border-color: background-opacity(#4e5b73, 0.7);
+  color: #ffffff;
+}
+button.btn-primary:active, button.btn-primary:active:hover, button.btn-primary:active:focus, button.copy-btn:active, button.copy-btn:active:hover, button.copy-btn:active:focus,
+.btn.btn-primary:active,
+.btn.btn-primary:active:hover,
+.btn.btn-primary:active:focus,
+.btn.copy-btn:active,
+.btn.copy-btn:active:hover,
+.btn.copy-btn:active:focus {
+  background-color: rgba(38, 25, 51, 0.9);
+  border-color: rgba(38, 25, 51, 0.9);
+  color: #ffffff;
+}
+button.btn-secondary,
+.btn.btn-secondary {
+  background-color: #e3e9f1;
+  border-color: #4e5b73;
+  color: #222222;
+}
+button.btn-secondary:focus,
+.btn.btn-secondary:focus {
+  background-color: #edeef1;
+  border-color: #ffffff;
+  box-shadow: 0 0 0 1px #006fbf;
+}
+button.btn-secondary:hover,
+.btn.btn-secondary:hover {
+  background-color: #4e5b73;
+  border-color: #4e5b73;
+  color: #ffffff;
+}
+button.btn-secondary:disabled, button.btn-secondary[aria-expanded=true],
+.btn.btn-secondary:disabled,
+.btn.btn-secondary[aria-expanded=true] {
+  background-color: rgba(237, 238, 241, 0.7);
+  border-color: rgba(237, 238, 241, 0.7);
+  color: #222222;
+}
+button.btn-secondary:disabled:hover, button.btn-secondary[aria-expanded=true]:hover,
+.btn.btn-secondary:disabled:hover,
+.btn.btn-secondary[aria-expanded=true]:hover {
+  background-color: rgba(237, 238, 241, 0.7);
+  border-color: rgba(237, 238, 241, 0.7);
+  color: #222222;
+}
+button.btn-secondary:active,
+.btn.btn-secondary:active {
+  background-color: rgba(78, 91, 115, 0.9);
+  border-color: rgba(78, 91, 115, 0.9);
+  color: #222222;
+}
+button.btn-secondary:active:hover, button.btn-secondary:active:focus,
+.btn.btn-secondary:active:hover,
+.btn.btn-secondary:active:focus {
+  background-color: rgba(78, 91, 115, 0.9);
+  border-color: rgba(78, 91, 115, 0.9);
+  color: #222222;
+}
+
+dialog {
+  border: none;
+  max-width: 35em;
+  width: 60%;
+  padding: 0;
+}
+dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadein-bd 500ms forwards;
+}
+@media (prefers-reduced-motion) {
+  dialog[open]::backdrop {
+    animation: fadein-bd 500ms forwards;
+  }
+}
+dialog .modal-header {
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+dialog .modal-header h2, dialog .modal-header h3 {
+  flex-grow: 2;
+  margin-bottom: 0;
+}
+dialog .modal-header .close-modal {
+  outline: none;
+  border: none;
+  color: #333;
+  margin: 0.25rem 0.25rem 0 auto;
+  background-color: #fff;
+  padding: 0.25rem 1rem;
+  flex-shrink: 1;
+}
+dialog .modal-header .close-modal:focus, dialog .modal-header .close-modal:hover {
+  outline: 2px solid #333;
+}
+dialog .modal-content {
+  max-width: 80%;
+  width: 17em;
+}
+@media (min-width: 768px) {
+  dialog .modal-content {
+    width: 35em;
+  }
+}
+@media (min-width: 1200px) {
+  dialog .modal-content {
+    width: 60em;
+  }
+}
+dialog .modal-footer {
+  justify-content: flex-start;
+}
+dialog .modal-footer .close-modal {
+  border: 1px solid #4e5b73;
+  color: opacity(1);
+}
+dialog[showing] {
+  display: block;
+  inset: 0;
+  animation: fadein-md 500ms forwards, slidedown-modal 500ms forwards;
+}
+@media (prefers-reduced-motion) {
+  dialog[showing] {
+    animation: fadein-md 500ms forwards;
+  }
+}
+dialog[showing]::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadein-bd 500ms forwards;
+}
+@media (prefers-reduced-motion) {
+  dialog[showing]::backdrop {
+    animation: fadein-bd 500ms forwards;
+  }
+}
+dialog[hiding] {
+  display: block;
+  inset: 0;
+  animation: fadeout 555ms forwards, scaleout 550ms forwards;
+}
+@media (prefers-reduced-motion) {
+  dialog[hiding] {
+    animation: fadeout 550ms forwards;
+  }
+}
+dialog[hiding]::backdrop {
+  animation: fadeout-bd 550ms forwards;
+}
+@media (prefers-reduced-motion) {
+  dialog[hiding]::backdrop {
+    animation: fadeout-bd 500ms forwards;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
