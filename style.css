@@ -223,11 +223,30 @@ dialog[open]::backdrop {
     animation: fadein-bd 500ms forwards;
   }
 }
+dialog .modal-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
 dialog .modal-header {
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
 }
 dialog .modal-header h2, dialog .modal-header h3 {
   flex-grow: 2;
@@ -245,22 +264,19 @@ dialog .modal-header .close-modal {
 dialog .modal-header .close-modal:focus, dialog .modal-header .close-modal:hover {
   outline: 2px solid #333;
 }
-dialog .modal-content {
-  max-width: 80%;
-  width: 17em;
-}
-@media (min-width: 768px) {
-  dialog .modal-content {
-    width: 35em;
-  }
-}
-@media (min-width: 1200px) {
-  dialog .modal-content {
-    width: 60em;
-  }
+dialog .modal-body {
+  padding: 1rem;
 }
 dialog .modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
   justify-content: flex-start;
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
 }
 dialog .modal-footer .close-modal {
   border: 1px solid #4e5b73;
@@ -296,7 +312,8 @@ dialog[hiding] {
   }
 }
 dialog[hiding]::backdrop {
-  animation: fadeout-bd 550ms forwards;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeout-bd 555ms forwards;
 }
 @media (prefers-reduced-motion) {
   dialog[hiding]::backdrop {

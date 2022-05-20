@@ -16,11 +16,31 @@ dialog {
         }
     }
 
+    .modal-content {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.3rem;
+        outline: 0;
+    }
+
     .modal-header {
+        display: -ms-flexbox;
+        display: flex;
         -ms-flex-align: center;
         align-items: center;
         -ms-flex-pack: center;
         justify-content: center;
+        padding: 1rem 1rem;
+        border-bottom: 1px solid #dee2e6;
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
 
         h {
 
@@ -47,24 +67,21 @@ dialog {
         }
     }
 
-    .modal-content {
-        max-width: 80%;
-        width: 17em;
-
-        @include b.breakpoint(small) {
-            // Tablets
-            width: 35em;
-        }
-
-        @include b.breakpoint(large) {
-            // Laptops
-            width: 60em;
-
-        }
+    .modal-body {
+        padding: 1rem;
     }
 
     .modal-footer {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
         justify-content: flex-start;
+        padding: 1rem;
+        border-top: 1px solid #dee2e6;
+        border-bottom-right-radius: 0.3rem;
+        border-bottom-left-radius: 0.3rem;
+
 
         .close-modal {
             // position: relative;
@@ -106,7 +123,8 @@ dialog {
         }
 
         &::backdrop {
-            animation: fadeout-bd 550ms forwards;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeout-bd 555ms forwards;
 
             @media (prefers-reduced-motion) {
                 animation: fadeout-bd 500ms forwards;
