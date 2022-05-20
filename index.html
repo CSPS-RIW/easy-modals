@@ -1,13 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <button id="trigger_1" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
+    data-modal="modal_1">
+    Trigger #1
+  </button>
+  <button id="trigger_2" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
+    data-modal="modal_2">
+    Trigger #2
+  </button>
+  <button id="trigger_3" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
+    data-modal="modal_3">
+    Trigger #3
+  </button>
+  <button id="trigger_4" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
+    data-modal="modal_4">
+    Trigger #4
+  </button>
+
+  <!-- Modals -->
+  <div class="modals">
+    <dialog id="modal_1" class="modal-megan" data-step="0">
+      <div class="modal-header">
+        <h2 class="add-title">Megan</h2>
+        <button title="Close overlay (escape key)" type="button"
+          class="close-modal">×</button>
+      </div>
+      <div class="modal-body">
+        <p>You should be looking at Megan:</p>
+        <img src="./_assets/images/SVG/megan-sm.svg" alt=""
+          style="height: 15em;position: relative;left: 30%;">
+      </div>
+      <div class="modal-footer">
+        <button id="btn_close_1" class="btn btn-secondary close-modal">Close</button>
+      </div>
+    </dialog>
+    <dialog id="modal_2" class="modal-robert" data-step="0">
+      <div class="modal-header">
+        <h2 class="add-title">Robert</h2>
+        <button title="Close overlay (escape key)" type="button"
+          class="close-modal">×</button>
+      </div>
+      <div class="modal-body">
+        <p>You should be looking at Robert:</p>
+        <img src="./_assets/images/SVG/robert-sm.svg" alt=""
+          style="height: 15em;position: relative;left: 30%;">
+      </div>
+      <div class="modal-footer">
+        <button id="btn_close_2" class="btn btn-secondary close-modal">Close</button>
+      </div>
+    </dialog>
+    <dialog id="modal_3" class="modal-morena" data-step="0">
+      <div class="modal-header">
+        <h2 class="add-title">Morena</h2>
+        <button title="Close overlay (escape key)" type="button"
+          class="close-modal">×</button>
+      </div>
+      <div class="modal-body">
+        <p>You should be looking at Morena:</p>
+        <img src="./_assets/images/SVG/morena-sm.svg" alt=""
+          style="height: 15em;position: relative;left: 30%;">
+      </div>
+      <div class="modal-footer">
+        <button id="btn_close_modal_3"
+          class="btn btn-secondary close-modal">Close</button>
+      </div>
+    </dialog>
+    <dialog id="modal_4" class="modal-alex" data-step="0">
+      <div class="modal-header">
+        <h2 class="add-title">Alex</h2>
+        <button title="Close overlay (escape key)" type="button"
+          class="close-modal">×</button>
+      </div>
+      <div class="modal-body">
+        <p>You should be looking at Alex:</p>
+        <img src="./_assets/images/SVG/alex-sm.svg" alt=""
+          style="height: 15em;position: relative;left: 30%;">
+      </div>
+      <div class="modal-footer">
+        <button id="btn_close_2_modal4"
+          class="btn btn-secondary close-modal">Close</button>
+      </div>
+    </dialog>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
