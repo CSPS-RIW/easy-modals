@@ -1,21 +1,16 @@
 import './style.css'
 import "wicg-inert"
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
-
 let triggerBtn = document.querySelectorAll('.trigger-btn');
 let closeBtns = document.querySelectorAll('.close-modal');
 let dialog = document.querySelector('dialog');
 let modals = document.querySelectorAll('dialog');
-let content = document.querySelector('.D2L-template-layout');
+let content = document.querySelector('.content-wrapper');
 
 const closeModal = (e) => {
   let closestDialog = e.target.closest('dialog');
   // Animate closing modals
-  // content.inert = false;
+  content.inert = false;
   // content.removeAttribute('inert');
   closestDialog.setAttribute('hiding', '');
   closestDialog.addEventListener('animationend', () => {
@@ -43,7 +38,7 @@ modals.forEach((modal) => {
           modal.showModal();
           modal.addEventListener('animationend', () => {
             modal.removeAttribute('showing');
-            // content.inert = true;
+            content.inert = true;
           }, {
             once: true
           })

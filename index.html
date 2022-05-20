@@ -9,25 +9,26 @@
 </head>
 
 <body>
-  <div id="app"></div>
-  <button id="trigger_1" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
-    data-modal="modal_1">
-    Trigger #1
-  </button>
-  <button id="trigger_2" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
-    data-modal="modal_2">
-    Trigger #2
-  </button>
-  <button id="trigger_3" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
-    data-modal="modal_3">
-    Trigger #3
-  </button>
-  <button id="trigger_4" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
-    data-modal="modal_4">
-    Trigger #4
-  </button>
+  <div class="content-wrapper">
+    <button id="trigger_1" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
+      data-modal="modal_1">
+      Trigger #1
+    </button>
+    <button id="trigger_2" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
+      data-modal="modal_2">
+      Trigger #2
+    </button>
+    <button id="trigger_3" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
+      data-modal="modal_3">
+      Trigger #3
+    </button>
+    <button id="trigger_4" class="btn btn-secondary trigger-btn hidden" title="Open Modal"
+      data-modal="modal_4">
+      Trigger #4
+    </button>
+  </div>
 
-  <!-- Modals -->
+  <!-- Modals should be outside .content-wrapper-->
   <div class="modals">
     <dialog id="modal_1" class="modal-megan" data-step="0">
       <div class="modal-header">
