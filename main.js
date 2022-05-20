@@ -21,10 +21,10 @@ const closeModal = (e) => {
   })
 }
 
-if (typeof dialog.showModal !== 'function') {
-  modals.hidden === true;
-  console.error('Update your browser for a more interactive experience');
-}
+// if (typeof dialog.showModal !== 'function') {
+//   modals.hidden === true;
+//   console.error('Update your browser for a more interactive experience');
+// }
 
 modals.forEach((modal) => {
   if (typeof dialog.showModal === "function") {
