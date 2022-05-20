@@ -1,0 +1,99 @@
+/* **************************************************
+ * GENERAL
+ * *************************************************/
+@use "./utils/vars/colors"as *;
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {
+    color: $body-grey;
+    // font-family: 'Lato', 'Arial', sans-serif;
+    font-family: 'Noto Sans', 'Arial', sans-serif;
+}
+
+
+h1,
+h3,
+h5 {
+    color: $slate-blue;
+    line-height: 1.1em;
+    font-weight: 400;
+}
+
+h2,
+h4,
+h6 {
+    color: #2a7ab0;
+    line-height: 1.1em;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 1.9em;
+    margin: 0.625rem 0;
+}
+
+h2,
+h2.modal-title {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 1.75em;
+}
+
+h3 {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 1.3em;
+}
+
+h4 {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 1.1em;
+}
+
+h5 {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 1.0em;
+}
+
+
+p {
+    color: $body-grey;
+    font-size: 1.1875rem;
+    line-height: 1.65em;
+}
+
+
+a {
+    color: $hyperlink-blue;
+    font-family: "Noto Sans", sans-serif;
+    border: none;
+    text-decoration: underline;
+
+    &:visited {
+        color: $hyperlink-visited;
+        text-decoration: underline;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+        color: $hyperlink-hover;
+    }
+}
+
+// data h2,
+// data .h2,
+// .card-header h2 {
+//     color: #2a7ab0;
+// }
+
+.wrapper {
+    display: flex;
+
+    .article {
+        display: flex;
+        flex-flow: column nowrap;
+
+    }
+}
